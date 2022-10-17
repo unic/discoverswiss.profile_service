@@ -1,0 +1,42 @@
+# DsOrderB2CResponse
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**order_number** | **string** |  | [optional] 
+**order_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**order_delivery** | [**\ProfileService\Client\Model\DsParcelDeliveryResponse[]**](DsParcelDeliveryResponse.md) |  | [optional] 
+**customer** | [**\ProfileService\Client\Model\DsOrderCustomerResponse**](DsOrderCustomerResponse.md) |  | [optional] 
+**customer_field** | [**\ProfileService\Client\Model\DsFieldDefinitionResponse[]**](DsFieldDefinitionResponse.md) |  | [optional] 
+**billing_address** | [**\ProfileService\Client\Model\DsFullAddressResponse**](DsFullAddressResponse.md) |  | [optional] 
+**shipping_address** | [**\ProfileService\Client\Model\DsFullAddressResponse**](DsFullAddressResponse.md) |  | [optional] 
+**payment_method_id** | **string** |  | [optional] 
+**confirmation_number** | **string** |  | [optional] 
+**order_status** | **string** |  | [optional] 
+**price_currency** | **string** |  | [optional] 
+**sales_channel** | **string** |  | [optional] 
+**total_amount** | **double** |  | [optional] 
+**total_amount_chf** | **double** |  | [optional] 
+**total_tax** | **double** |  | [optional] 
+**total_tax_chf** | **double** |  | [optional] 
+**mail_body_token** | **string** |  | [optional] 
+**language** | **string** |  | [optional] 
+**ordered_item** | [**\ProfileService\Client\Model\DsOrderItemResponse[]**](DsOrderItemResponse.md) |  | [optional] 
+**description** | **string** |  | [optional] 
+**expires_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**term** | [**\ProfileService\Client\Model\DsTermVersionCheckResponse[]**](DsTermVersionCheckResponse.md) |  | [optional] 
+**additional_property** | [**\ProfileService\Client\Model\DsPropertyValueResponse[]**](DsPropertyValueResponse.md) |  | [optional] 
+**order_payment_details** | [**\ProfileService\Client\Model\DsOrderPaymentDetailsResponse**](DsOrderPaymentDetailsResponse.md) |  | [optional] 
+**download** | **string** |  | [optional] 
+**partner_acronym** | **string** |  | [optional] 
+**profile_id** | **string** |  | [optional] 
+**id** | **string** |  | [optional] 
+**data_governance** | [**\ProfileService\Client\Model\DsDataGovernanceResponse**](DsDataGovernanceResponse.md) |  | [optional] 
+**created_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**last_modified** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**last_modified_by** | **string** |  | [optional] 
+**created_by_subscription** | **string** |  | [optional] 
+**last_modified_by_subscription** | **string** |  | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
