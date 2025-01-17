@@ -4,7 +4,6 @@ All URIs are relative to *https://api.discover.swiss/test/profile*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**1ec3d9200a5a4be88f2c7786aadc8e18**](DefaultApi.md#1ec3d9200a5a4be88f2c7786aadc8e18) | **GET** /openapi/{version}.{extension} | openapi
 [**acceptATermVersion**](DefaultApi.md#acceptatermversion) | **POST** /terms | Accept a term-version
 [**addGuestCardToUser**](DefaultApi.md#addguestcardtouser) | **PUT** /tickets/guestcard | Add guest card to user
 [**cancelDeletionProfile**](DefaultApi.md#canceldeletionprofile) | **PUT** /me/cancelDelete | Cancel deletion profile
@@ -72,62 +71,6 @@ Method | HTTP request | Description
 [**validateEmailAddress**](DefaultApi.md#validateemailaddress) | **PUT** /email/validate | Validate email address
 [**verifyAccountEmail**](DefaultApi.md#verifyaccountemail) | **PUT** /me/verify | Verify account email
 [**writeBusinessTrailEntry**](DefaultApi.md#writebusinesstrailentry) | **POST** /businesstrail | Write business trail entry
-
-# **1ec3d9200a5a4be88f2c7786aadc8e18**
-> 1ec3d9200a5a4be88f2c7786aadc8e18($version, $extension)
-
-openapi
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: apiKeyHeader
-$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
-$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
-
-$apiInstance = new ProfileService\Client\Api\DefaultApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$version = "version_example"; // string | OpenAPI version
-$extension = "extension_example"; // string | OpenAPI document extension
-
-try {
-    $apiInstance->1ec3d9200a5a4be88f2c7786aadc8e18($version, $extension);
-} catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->1ec3d9200a5a4be88f2c7786aadc8e18: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **string**| OpenAPI version |
- **extension** | **string**| OpenAPI document extension |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **acceptATermVersion**
 > \ProfileService\Client\Model\DsTermVersionCheckResponse acceptATermVersion($body, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone)

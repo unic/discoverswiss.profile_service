@@ -71,30 +71,6 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
-$version = "version_example"; // string | OpenAPI version
-$extension = "extension_example"; // string | OpenAPI document extension
-
-try {
-    $apiInstance->1ec3d9200a5a4be88f2c7786aadc8e18($version, $extension);
-} catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->1ec3d9200a5a4be88f2c7786aadc8e18: ', $e->getMessage(), PHP_EOL;
-}
-
-// Configure API key authorization: apiKeyHeader
-$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');
-// Configure API key authorization: apiKeyQuery
-$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
-
-$apiInstance = new ProfileService\Client\Api\DefaultApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
 $body = new \ProfileService\Client\Model\DsAcceptTermVersionRequest(); // \ProfileService\Client\Model\DsAcceptTermVersionRequest | TermVersionCheckRequest.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
@@ -1920,7 +1896,6 @@ All URIs are relative to *https://api.discover.swiss/test/profile*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**1ec3d9200a5a4be88f2c7786aadc8e18**](docs/Api/DefaultApi.md#1ec3d9200a5a4be88f2c7786aadc8e18) | **GET** /openapi/{version}.{extension} | openapi
 *DefaultApi* | [**acceptATermVersion**](docs/Api/DefaultApi.md#acceptatermversion) | **POST** /terms | Accept a term-version
 *DefaultApi* | [**addGuestCardToUser**](docs/Api/DefaultApi.md#addguestcardtouser) | **PUT** /tickets/guestcard | Add guest card to user
 *DefaultApi* | [**cancelDeletionProfile**](docs/Api/DefaultApi.md#canceldeletionprofile) | **PUT** /me/cancelDelete | Cancel deletion profile
