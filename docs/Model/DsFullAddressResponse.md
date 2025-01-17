@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **given_name** | **string** |  | [optional] 
 **family_name** | **string** |  | [optional] 
 **company_name** | **string** |  | [optional] 
+**email** | **string** |  | [optional] 
 **address_country** | **string** |  | [optional] 
 **address_locality** | **string** |  | [optional] 
 **address_region** | **string** |  | [optional] 

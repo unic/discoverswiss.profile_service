@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **postal_code** | **string** |  | [optional] 
 **post_office_box_number** | **string** |  | [optional] 
 **street_address** | **string** |  | [optional] 
+**company_name** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

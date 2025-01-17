@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **property_id** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
+**additional_type** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **required** | **bool** |  | [optional] 
 **required_for_offers** | **bool** |  | [optional] 
@@ -13,6 +14,7 @@ Name | Type | Description | Notes
 **range_max** | **string** |  | [optional] 
 **range_base_property_id** | **string** |  | [optional] 
 **parent_field_property_id** | **string** |  | [optional] 
+**parent_field_operator** | **string** |  | [optional] 
 **parent_field_value** | **string** |  | [optional] 
 **readonly** | **bool** |  | [optional] 
 

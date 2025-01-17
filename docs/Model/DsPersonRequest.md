@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **family_name** | **string** |  | [optional] 
 **alternate_name** | **string** |  | [optional] 
 **fax_number** | **string** |  | [optional] 
-**gender** | **string** |  | [optional] 
+**gender** | **string** | Supported values: Male, Female, Diverse | [optional] 
 **nationality** | **string** |  | [optional] 
 **birth_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **telephone** | **string** |  | [optional] 
@@ -18,9 +18,10 @@ Name | Type | Description | Notes
 **passport** | **string** |  | [optional] 
 **marital_status** | **string** |  | [optional] 
 **mobile_phone** | **string** |  | [optional] 
-**salutation** | **string** |  | [optional] 
+**salutation** | **string** | Obsolete. Use Gender property instead | [optional] 
 **reduction** | **string** |  | [optional] 
 **preferred_language** | **string** |  | [optional] 
+**works_for_name** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

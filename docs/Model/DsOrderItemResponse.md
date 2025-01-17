@@ -16,10 +16,15 @@ Name | Type | Description | Notes
 **amount_chf** | **double** |  | [optional] 
 **tax** | **double** |  | [optional] 
 **tax_chf** | **double** |  | [optional] 
+**child_items_total_amount** | **double** |  | [optional] 
+**child_items_total_amount_chf** | **double** |  | [optional] 
+**child_items_total_tax_chf** | **double** |  | [optional] 
 **currency** | **string** |  | [optional] 
+**hide_amount** | **bool** |  | [optional] 
 **ticket** | [**\ProfileService\Client\Model\DsTicketSimplexResponse[]**](DsTicketSimplexResponse.md) |  | [optional] 
 **offer_bundle_id** | **string** |  | [optional] 
 **additional_property** | [**\ProfileService\Client\Model\DsPropertyValueResponse[]**](DsPropertyValueResponse.md) |  | [optional] 
+**supporting_document** | **string[]** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

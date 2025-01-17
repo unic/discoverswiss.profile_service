@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **email** | **string** |  | [optional] 
 **telephone** | **string** |  | [optional] 
 **additional_property** | [**\ProfileService\Client\Model\DsPropertyValueResponse[]**](DsPropertyValueResponse.md) |  | [optional] 
+**profile_image** | **string** |  | [optional] 
+**supporting_document** | **string[]** |  | [optional] 
+**readonly** | **bool** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

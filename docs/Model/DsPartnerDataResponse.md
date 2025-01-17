@@ -4,9 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** |  | [optional] 
-**partner_acronym** | **string** |  | [optional] 
 **member_id** | **string** |  | [optional] 
+**additional_type** | **string** |  | [optional] 
 **additional_property** | [**\ProfileService\Client\Model\DsPropertyValueResponse[]**](DsPropertyValueResponse.md) |  | [optional] 
+**profile_id** | **string** |  | [optional] 
 **id** | **string** |  | [optional] 
 **data_governance** | [**\ProfileService\Client\Model\DsDataGovernanceResponse**](DsDataGovernanceResponse.md) |  | [optional] 
 **created_date_time** | [**\DateTime**](\DateTime.md) |  | [optional] 

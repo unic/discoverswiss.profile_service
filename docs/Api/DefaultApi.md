@@ -4,31 +4,42 @@ All URIs are relative to *https://api.discover.swiss/test/profile*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**1ec3d9200a5a4be88f2c7786aadc8e18**](DefaultApi.md#1ec3d9200a5a4be88f2c7786aadc8e18) | **GET** /openapi/{version}.{extension} | openapi
 [**acceptATermVersion**](DefaultApi.md#acceptatermversion) | **POST** /terms | Accept a term-version
 [**addGuestCardToUser**](DefaultApi.md#addguestcardtouser) | **PUT** /tickets/guestcard | Add guest card to user
 [**cancelDeletionProfile**](DefaultApi.md#canceldeletionprofile) | **PUT** /me/cancelDelete | Cancel deletion profile
 [**checkAcceptedTerm**](DefaultApi.md#checkacceptedterm) | **GET** /terms/{code} | Check accepted term
 [**confirmDeletionProfile**](DefaultApi.md#confirmdeletionprofile) | **PUT** /me/confirmDelete | Confirm deletion profile
+[**confirmStay**](DefaultApi.md#confirmstay) | **PUT** /stays/{id}/confirm | Confirm stay
+[**createCard**](DefaultApi.md#createcard) | **POST** /cards | Create card
 [**createPartnerdata**](DefaultApi.md#createpartnerdata) | **POST** /partnerdata | Create partnerdata
 [**createParty**](DefaultApi.md#createparty) | **POST** /parties | Create party
+[**createPartyInvitation**](DefaultApi.md#createpartyinvitation) | **POST** /parties/{id}/invite | Create party invitation
+[**deleteCard**](DefaultApi.md#deletecard) | **DELETE** /cards/{id} | Delete card
 [**deleteMedia**](DefaultApi.md#deletemedia) | **DELETE** /media/{identifier} | Delete media
 [**deleteMyProfile**](DefaultApi.md#deletemyprofile) | **DELETE** /me | Delete my profile
 [**deletePartnerdata**](DefaultApi.md#deletepartnerdata) | **DELETE** /partnerdata/{name} | Delete partnerdata
 [**deletePartnerdataSharePermission**](DefaultApi.md#deletepartnerdatasharepermission) | **DELETE** /partnerdata/{name}/share | Delete partnerdata share permission
 [**deleteParty**](DefaultApi.md#deleteparty) | **DELETE** /parties/{id} | Delete party
+[**deletePartyInvitation**](DefaultApi.md#deletepartyinvitation) | **DELETE** /parties/{id}/invite | Delete party invitation
 [**deleteProfilePicture**](DefaultApi.md#deleteprofilepicture) | **DELETE** /me/profileimage | Delete profile picture
+[**deleteStay**](DefaultApi.md#deletestay) | **DELETE** /stays/{id} | Delete stay
 [**downloadMedia**](DefaultApi.md#downloadmedia) | **GET** /media/{identifier}/download | Download media
 [**downloadOrderinfo**](DefaultApi.md#downloadorderinfo) | **GET** /orderinfos/{orderToken} | Download orderinfo
 [**downloadTicket**](DefaultApi.md#downloadticket) | **GET** /tickets/{id}/download | Download ticket
+[**getAddressById**](DefaultApi.md#getaddressbyid) | **GET** /addresses/{id} | GetAddressById
 [**getBusinessTrailEntries**](DefaultApi.md#getbusinesstrailentries) | **GET** /businesstrail | Get business trail entries
+[**getCard**](DefaultApi.md#getcard) | **GET** /cards/{id} | Get card
 [**getMedia**](DefaultApi.md#getmedia) | **GET** /media/{identifier} | Get media
 [**getMediaBinary**](DefaultApi.md#getmediabinary) | **GET** /media/{identifier}/base64 | Get media binary
 [**getMediaThumbnailBinary**](DefaultApi.md#getmediathumbnailbinary) | **GET** /media/{identifier}/thumbnail | Get media thumbnail binary
+[**getMyCards**](DefaultApi.md#getmycards) | **GET** /cards | Get my cards
 [**getMyMedia**](DefaultApi.md#getmymedia) | **GET** /media | Get my media
 [**getMyOrders**](DefaultApi.md#getmyorders) | **GET** /orders | Get my orders
 [**getMyParties**](DefaultApi.md#getmyparties) | **GET** /parties | Get my parties
 [**getMyPartnerData**](DefaultApi.md#getmypartnerdata) | **GET** /partnerdata | Get my partner-data
 [**getMyProfile**](DefaultApi.md#getmyprofile) | **GET** /me | Get my profile
+[**getMyStays**](DefaultApi.md#getmystays) | **GET** /stays | Get my stays
 [**getMyTickets**](DefaultApi.md#getmytickets) | **GET** /tickets | Get my tickets
 [**getOrder**](DefaultApi.md#getorder) | **GET** /orders/{id} | Get order
 [**getPartnerdata**](DefaultApi.md#getpartnerdata) | **GET** /partnerdata/{name} | Get partnerdata
@@ -36,23 +47,90 @@ Method | HTTP request | Description
 [**getProfilePictureThumbnail**](DefaultApi.md#getprofilepicturethumbnail) | **GET** /me/profileimage | Get profile picture thumbnail
 [**getStatus**](DefaultApi.md#getstatus) | **GET** /status | GetStatus
 [**getStatusAbout**](DefaultApi.md#getstatusabout) | **GET** /status/about | GetStatusAbout
+[**getStay**](DefaultApi.md#getstay) | **GET** /stays/{id} | Get stay
 [**getTicket**](DefaultApi.md#getticket) | **GET** /tickets/{id} | Get ticket
 [**getTicketBinary**](DefaultApi.md#getticketbinary) | **GET** /tickets/{id}/base64 | Get ticket binary
 [**getToken**](DefaultApi.md#gettoken) | **POST** /token | Get token
 [**importSharedProfileData**](DefaultApi.md#importsharedprofiledata) | **PUT** /import/{sharingIdentifier} | Import shared profile data
+[**initializeStay**](DefaultApi.md#initializestay) | **POST** /stays | Initialize stay
+[**joinParty**](DefaultApi.md#joinparty) | **PUT** /parties/join | Join party
+[**listAddresses**](DefaultApi.md#listaddresses) | **GET** /addresses | ListAddresses
+[**listTravelers**](DefaultApi.md#listtravelers) | **GET** /travelers | ListTravelers
+[**pATCHPartnerdataObject**](DefaultApi.md#patchpartnerdataobject) | **PATCH** /partnerdata/{name} | PATCH partnerdata object
 [**resendAccountVerificationEmail**](DefaultApi.md#resendaccountverificationemail) | **PUT** /me/verify/email | Resend account verification email
 [**saveConsentDissent**](DefaultApi.md#saveconsentdissent) | **POST** /anonymous/terms | Save consent/dissent
+[**sendOtp**](DefaultApi.md#sendotp) | **POST** /auth/otp | Send Otp
 [**sharePartnerdataObject**](DefaultApi.md#sharepartnerdataobject) | **PUT** /partnerdata/{name}/share | Share partnerdata object
+[**updateCard**](DefaultApi.md#updatecard) | **PUT** /cards/{id} | Update card
+[**updateCustomerInStay**](DefaultApi.md#updatecustomerinstay) | **PUT** /stays/{id}/customer | Update customer in stay
 [**updateMyProfile**](DefaultApi.md#updatemyprofile) | **PATCH** /me | Update my profile
-[**updatePartnerdata**](DefaultApi.md#updatepartnerdata) | **PUT** /partnerdata/{name} | Update partnerdata
+[**updateOrCreatePartnerdata**](DefaultApi.md#updateorcreatepartnerdata) | **PUT** /partnerdata/{name} | Update or create partnerdata
 [**updatePartnerdataProperty**](DefaultApi.md#updatepartnerdataproperty) | **PUT** /partnerdata/{name}/{propertyId} | Update partnerdata property
 [**updateParty**](DefaultApi.md#updateparty) | **PUT** /parties/{id} | Update party
+[**updateStay**](DefaultApi.md#updatestay) | **PUT** /stays/{id} | Update stay
 [**uploadMedia**](DefaultApi.md#uploadmedia) | **POST** /media | Upload media
+[**validateEmailAddress**](DefaultApi.md#validateemailaddress) | **PUT** /email/validate | Validate email address
 [**verifyAccountEmail**](DefaultApi.md#verifyaccountemail) | **PUT** /me/verify | Verify account email
 [**writeBusinessTrailEntry**](DefaultApi.md#writebusinesstrailentry) | **POST** /businesstrail | Write business trail entry
 
+# **1ec3d9200a5a4be88f2c7786aadc8e18**
+> 1ec3d9200a5a4be88f2c7786aadc8e18($version, $extension)
+
+openapi
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$version = "version_example"; // string | OpenAPI version
+$extension = "extension_example"; // string | OpenAPI document extension
+
+try {
+    $apiInstance->1ec3d9200a5a4be88f2c7786aadc8e18($version, $extension);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->1ec3d9200a5a4be88f2c7786aadc8e18: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **version** | **string**| OpenAPI version |
+ **extension** | **string**| OpenAPI document extension |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **acceptATermVersion**
-> \ProfileService\Client\Model\DsTermVersionCheckResponse acceptATermVersion($body, $ocp_apim_subscription_key, $accept_timezone)
+> \ProfileService\Client\Model\DsTermVersionCheckResponse acceptATermVersion($body, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone)
 
 Accept a term-version
 
@@ -78,10 +156,12 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
 );
 $body = new \ProfileService\Client\Model\DsAcceptTermVersionRequest(); // \ProfileService\Client\Model\DsAcceptTermVersionRequest | TermVersionCheckRequest.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
 
 try {
-    $result = $apiInstance->acceptATermVersion($body, $ocp_apim_subscription_key, $accept_timezone);
+    $result = $apiInstance->acceptATermVersion($body, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->acceptATermVersion: ', $e->getMessage(), PHP_EOL;
@@ -95,6 +175,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\ProfileService\Client\Model\DsAcceptTermVersionRequest**](../Model/DsAcceptTermVersionRequest.md)| TermVersionCheckRequest. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
 
 ### Return type
@@ -141,7 +223,7 @@ $body = new \ProfileService\Client\Model\DsGuestCardRequest(); // \ProfileServic
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
-$accept_language = "accept_language_example"; // string | Localized properties.
+$accept_language = "accept_language_example"; // string | Two-letter language code to get localized properties.
 
 try {
     $result = $apiInstance->addGuestCardToUser($body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language);
@@ -160,7 +242,7 @@ Name | Type | Description  | Notes
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
- **accept_language** | **string**| Localized properties. | [optional]
+ **accept_language** | **string**| Two-letter language code to get localized properties. | [optional]
 
 ### Return type
 
@@ -234,7 +316,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **checkAcceptedTerm**
-> \ProfileService\Client\Model\DsTermVersionCheckResponse checkAcceptedTerm($code, $ocp_apim_subscription_key, $accept_timezone)
+> \ProfileService\Client\Model\DsTermVersionCheckResponse checkAcceptedTerm($code, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone)
 
 Check accepted term
 
@@ -260,10 +342,12 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
 );
 $code = "code_example"; // string | The code of the term to test if it has been accepted already.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
 
 try {
-    $result = $apiInstance->checkAcceptedTerm($code, $ocp_apim_subscription_key, $accept_timezone);
+    $result = $apiInstance->checkAcceptedTerm($code, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->checkAcceptedTerm: ', $e->getMessage(), PHP_EOL;
@@ -277,6 +361,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **code** | **string**| The code of the term to test if it has been accepted already. |
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
 
 ### Return type
@@ -350,6 +436,138 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **confirmStay**
+> \ProfileService\Client\Model\DsStayResponse confirmStay($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone)
+
+Confirm stay
+
+Update an existing stay-object and setup 'confirmed' status.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the stay.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_language = "accept_language_example"; // string | Two-letter language code to get localized properties.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->confirmStay($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->confirmStay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the stay. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_language** | **string**| Two-letter language code to get localized properties. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsStayResponse**](../Model/DsStayResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createCard**
+> \ProfileService\Client\Model\DsCardResponse createCard($body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+Create card
+
+Create a new card object in the current profile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \ProfileService\Client\Model\DsCardRequest(); // \ProfileService\Client\Model\DsCardRequest | Card request model
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->createCard($body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->createCard: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\ProfileService\Client\Model\DsCardRequest**](../Model/DsCardRequest.md)| Card request model | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsCardResponse**](../Model/DsCardResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **createPartnerdata**
 > \ProfileService\Client\Model\DsPartnerDataResponse createPartnerdata($body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
 
@@ -375,11 +593,11 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \ProfileService\Client\Model\DsPartnerDataRequest(); // \ProfileService\Client\Model\DsPartnerDataRequest | PartnerDataRequest.
+$body = new \ProfileService\Client\Model\DsPartnerDataCreateRequest(); // \ProfileService\Client\Model\DsPartnerDataCreateRequest | PartnerDataRequest.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
-$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID to apply its offset to dates and time
 
 try {
     $result = $apiInstance->createPartnerdata($body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
@@ -394,11 +612,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\ProfileService\Client\Model\DsPartnerDataRequest**](../Model/DsPartnerDataRequest.md)| PartnerDataRequest. | [optional]
+ **body** | [**\ProfileService\Client\Model\DsPartnerDataCreateRequest**](../Model/DsPartnerDataCreateRequest.md)| PartnerDataRequest. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
- **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+ **accept_timezone** | **string**| Time zone ID to apply its offset to dates and time | [optional]
 
 ### Return type
 
@@ -476,6 +694,134 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createPartyInvitation**
+> \ProfileService\Client\Model\DsPartyInvitationResponse createPartyInvitation($id, $body, $ocp_apim_subscription_key, $authorization, $profile_token)
+
+Create party invitation
+
+Add permission to join the party and returns invite token.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the party.
+$body = "\"string\""; // string | 
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+
+try {
+    $result = $apiInstance->createPartyInvitation($id, $body, $ocp_apim_subscription_key, $authorization, $profile_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->createPartyInvitation: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the party. |
+ **body** | [**string**](../Model/string.md)|  | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsPartyInvitationResponse**](../Model/DsPartyInvitationResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteCard**
+> \ProfileService\Client\Model\DsCardsIdDelete200ApplicationJsonResponse deleteCard($id, $ocp_apim_subscription_key, $authorization, $profile_token)
+
+Delete card
+
+Deletes an existing card object of the current profile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the card.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+
+try {
+    $result = $apiInstance->deleteCard($id, $ocp_apim_subscription_key, $authorization, $profile_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->deleteCard: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the card. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsCardsIdDelete200ApplicationJsonResponse**](../Model/DsCardsIdDelete200ApplicationJsonResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -792,6 +1138,69 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **deletePartyInvitation**
+> \ProfileService\Client\Model\DsPartiesIdInviteDelete200ApplicationJsonResponse deletePartyInvitation($id, $ocp_apim_subscription_key, $authorization, $profile_token)
+
+Delete party invitation
+
+Remove the permission to join the party.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the party.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+
+try {
+    $result = $apiInstance->deletePartyInvitation($id, $ocp_apim_subscription_key, $authorization, $profile_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->deletePartyInvitation: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the party. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsPartiesIdInviteDelete200ApplicationJsonResponse**](../Model/DsPartiesIdInviteDelete200ApplicationJsonResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **deleteProfilePicture**
 > deleteProfilePicture($ocp_apim_subscription_key, $authorization, $profile_token)
 
@@ -849,6 +1258,69 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteStay**
+> \ProfileService\Client\Model\DsStaysIdDelete200ApplicationJsonResponse deleteStay($id, $ocp_apim_subscription_key, $authorization, $profile_token)
+
+Delete stay
+
+Deletes an existing stay object of the current profile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the stay.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+
+try {
+    $result = $apiInstance->deleteStay($id, $ocp_apim_subscription_key, $authorization, $profile_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->deleteStay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the stay. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsStaysIdDelete200ApplicationJsonResponse**](../Model/DsStaysIdDelete200ApplicationJsonResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1039,8 +1511,73 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getAddressById**
+> \ProfileService\Client\Model\DsAddressResponse getAddressById($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+GetAddressById
+
+Get specific address object
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the address.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->getAddressById($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->getAddressById: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the address. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsAddressResponse**](../Model/DsAddressResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getBusinessTrailEntries**
-> \ProfileService\Client\Model\DsBusinessTrailEntryResponse getBusinessTrailEntries($body, $ocp_apim_subscription_key, $accept_timezone)
+> \ProfileService\Client\Model\DsBusinessTrailEntryResponse getBusinessTrailEntries($body, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone)
 
 Get business trail entries
 
@@ -1066,10 +1603,12 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
 );
 $body = new \ProfileService\Client\Model\DsBusinessTrailRequest(); // \ProfileService\Client\Model\DsBusinessTrailRequest | BusinessTrailRequest.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
 
 try {
-    $result = $apiInstance->getBusinessTrailEntries($body, $ocp_apim_subscription_key, $accept_timezone);
+    $result = $apiInstance->getBusinessTrailEntries($body, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getBusinessTrailEntries: ', $e->getMessage(), PHP_EOL;
@@ -1083,6 +1622,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\ProfileService\Client\Model\DsBusinessTrailRequest**](../Model/DsBusinessTrailRequest.md)| BusinessTrailRequest. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
 
 ### Return type
@@ -1100,8 +1641,73 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getCard**
+> \ProfileService\Client\Model\DsCardResponse getCard($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+Get card
+
+Get specific card object
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the card.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->getCard($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->getCard: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the card. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsCardResponse**](../Model/DsCardResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getMedia**
-> \ProfileService\Client\Model\DsProfileMediaResponse getMedia($identifier, $ocp_apim_subscription_key, $authorization, $profile_token)
+> \ProfileService\Client\Model\DsProfileMediaBaseResponse getMedia($identifier, $ocp_apim_subscription_key, $authorization, $profile_token)
 
 Get media
 
@@ -1150,7 +1756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\ProfileService\Client\Model\DsProfileMediaResponse**](../Model/DsProfileMediaResponse.md)
+[**\ProfileService\Client\Model\DsProfileMediaBaseResponse**](../Model/DsProfileMediaBaseResponse.md)
 
 ### Authorization
 
@@ -1289,8 +1895,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getMyCards**
+> \ProfileService\Client\Model\DsCardResponseArray getMyCards($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+Get my cards
+
+Get all cards of the current user
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->getMyCards($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->getMyCards: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsCardResponseArray**](../Model/DsCardResponseArray.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getMyMedia**
-> \ProfileService\Client\Model\DsProfileMediaResponse getMyMedia($ocp_apim_subscription_key, $authorization, $profile_token)
+> \ProfileService\Client\Model\DsProfileMediaBaseResponse getMyMedia($ocp_apim_subscription_key, $authorization, $profile_token)
 
 Get my media
 
@@ -1337,7 +2006,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\ProfileService\Client\Model\DsProfileMediaResponse**](../Model/DsProfileMediaResponse.md)
+[**\ProfileService\Client\Model\DsProfileMediaBaseResponse**](../Model/DsProfileMediaBaseResponse.md)
 
 ### Authorization
 
@@ -1375,7 +2044,7 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
-$continuation_token = "continuation_token_example"; // string | Use it to get next set of data.
+$continuation_token = "continuation_token_example"; // string | Use it for get next set of data.
 $top = 56; // int | Format - int32. Number of next set of entities.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
@@ -1395,7 +2064,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **continuation_token** | **string**| Use it to get next set of data. | [optional]
+ **continuation_token** | **string**| Use it for get next set of data. | [optional]
  **top** | **int**| Format - int32. Number of next set of entities. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
@@ -1505,12 +2174,12 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
-$continuation_token = "continuation_token_example"; // string | Use it to get next set of data.
+$continuation_token = "continuation_token_example"; // string | Use it for get next set of data.
 $top = 56; // int | Format - int32. Number of next set of entities.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
-$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID to apply its offset to dates and time
 
 try {
     $result = $apiInstance->getMyPartnerData($continuation_token, $top, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
@@ -1525,12 +2194,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **continuation_token** | **string**| Use it to get next set of data. | [optional]
+ **continuation_token** | **string**| Use it for get next set of data. | [optional]
  **top** | **int**| Format - int32. Number of next set of entities. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
- **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+ **accept_timezone** | **string**| Time zone ID to apply its offset to dates and time | [optional]
 
 ### Return type
 
@@ -1610,8 +2279,71 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getMyStays**
+> \ProfileService\Client\Model\DsStayResponseArray getMyStays($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+Get my stays
+
+Get all stays of the current user
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->getMyStays($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->getMyStays: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsStayResponseArray**](../Model/DsStayResponseArray.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getMyTickets**
-> \ProfileService\Client\Model\DsTicketsResponse getMyTickets($scope, $continuation_token, $top, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+> \ProfileService\Client\Model\DsTicketsResponse getMyTickets($scope, $order_number, $additional_type, $continuation_token, $top, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
 
 Get my tickets
 
@@ -1635,8 +2367,10 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
-$scope = "scope_example"; // string | Scope of the tickets
-$continuation_token = "continuation_token_example"; // string | Use it to get next set of data.
+$scope = "scope_example"; // string | Scope of the tickets (Default: currentAndFuture). Valid values: currentAndFuture, current, past, all
+$order_number = "order_number_example"; // string | To get only ticket related to order
+$additional_type = 56; // int | Format - int32. Filter by the additional type property
+$continuation_token = "continuation_token_example"; // string | Use it for get next set of data.
 $top = 56; // int | Format - int32. Number of next set of entities.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
@@ -1644,7 +2378,7 @@ $profile_token = "profile_token_example"; // string | Profile token to identify 
 $accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
 
 try {
-    $result = $apiInstance->getMyTickets($scope, $continuation_token, $top, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    $result = $apiInstance->getMyTickets($scope, $order_number, $additional_type, $continuation_token, $top, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getMyTickets: ', $e->getMessage(), PHP_EOL;
@@ -1656,8 +2390,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **scope** | **string**| Scope of the tickets | [optional]
- **continuation_token** | **string**| Use it to get next set of data. | [optional]
+ **scope** | **string**| Scope of the tickets (Default: currentAndFuture). Valid values: currentAndFuture, current, past, all | [optional]
+ **order_number** | **string**| To get only ticket related to order | [optional]
+ **additional_type** | **int**| Format - int32. Filter by the additional type property | [optional]
+ **continuation_token** | **string**| Use it for get next set of data. | [optional]
  **top** | **int**| Format - int32. Number of next set of entities. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
@@ -1773,7 +2509,7 @@ $name = "name_example"; // string | Name of the partnerdata.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
-$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID to apply its offset to dates and time
 
 try {
     $result = $apiInstance->getPartnerdata($name, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
@@ -1792,7 +2528,7 @@ Name | Type | Description  | Notes
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
- **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+ **accept_timezone** | **string**| Time zone ID to apply its offset to dates and time | [optional]
 
 ### Return type
 
@@ -1992,11 +2728,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStatusAbout**
-> getStatusAbout($ocp_apim_subscription_key)
+> \ProfileService\Client\Model\DsStatusResponse getStatusAbout($ocp_apim_subscription_key)
 
 GetStatusAbout
 
-Get API Status
+Get API Status, Version and Name
 
 ### Example
 ```php
@@ -2019,7 +2755,8 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 
 try {
-    $apiInstance->getStatusAbout($ocp_apim_subscription_key);
+    $result = $apiInstance->getStatusAbout($ocp_apim_subscription_key);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getStatusAbout: ', $e->getMessage(), PHP_EOL;
 }
@@ -2034,7 +2771,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\ProfileService\Client\Model\DsStatusResponse**](../Model/DsStatusResponse.md)
 
 ### Authorization
 
@@ -2043,7 +2780,72 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getStay**
+> \ProfileService\Client\Model\DsStayResponse getStay($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+Get stay
+
+Get specific stay
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the stay.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->getStay($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->getStay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the stay. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsStayResponse**](../Model/DsStayResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -2176,7 +2978,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getToken**
-> \ProfileService\Client\Model\DsTokenResponse getToken($grant_type, $refresh_token, $max_refresh_lifetime, $ocp_apim_subscription_key, $authorization, $accept_timezone)
+> \ProfileService\Client\Model\DsTokenResponse getToken($grant_type, $refresh_token, $max_refresh_lifetime, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
 
 Get token
 
@@ -2205,10 +3007,11 @@ $refresh_token = "refresh_token_example"; // string | The refresh token case of 
 $max_refresh_lifetime = "max_refresh_lifetime_example"; // string | maximal refresh token lifetime requested by the client in days
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
 $accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
 
 try {
-    $result = $apiInstance->getToken($grant_type, $refresh_token, $max_refresh_lifetime, $ocp_apim_subscription_key, $authorization, $accept_timezone);
+    $result = $apiInstance->getToken($grant_type, $refresh_token, $max_refresh_lifetime, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->getToken: ', $e->getMessage(), PHP_EOL;
@@ -2225,6 +3028,7 @@ Name | Type | Description  | Notes
  **max_refresh_lifetime** | **string**| maximal refresh token lifetime requested by the client in days | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
  **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
 
 ### Return type
@@ -2303,6 +3107,329 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **initializeStay**
+> \ProfileService\Client\Model\DsStayResponse initializeStay($body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone)
+
+Initialize stay
+
+Create a new stay with initializing parameters
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \ProfileService\Client\Model\DsStayRequest(); // \ProfileService\Client\Model\DsStayRequest | StayRequest containing the parameters to initialize the stay.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_language = "accept_language_example"; // string | Two-letter language code to get localized properties.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->initializeStay($body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->initializeStay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\ProfileService\Client\Model\DsStayRequest**](../Model/DsStayRequest.md)| StayRequest containing the parameters to initialize the stay. | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_language** | **string**| Two-letter language code to get localized properties. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsStayResponse**](../Model/DsStayResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **joinParty**
+> \ProfileService\Client\Model\DsPartiesJoinPut200ApplicationJsonResponse joinParty($body, $ocp_apim_subscription_key, $authorization, $profile_token)
+
+Join party
+
+Add the current user as a member to the party referenced in the invitation token.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \ProfileService\Client\Model\DsJoinPartyRequest(); // \ProfileService\Client\Model\DsJoinPartyRequest | Join party request
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+
+try {
+    $result = $apiInstance->joinParty($body, $ocp_apim_subscription_key, $authorization, $profile_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->joinParty: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\ProfileService\Client\Model\DsJoinPartyRequest**](../Model/DsJoinPartyRequest.md)| Join party request | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsPartiesJoinPut200ApplicationJsonResponse**](../Model/DsPartiesJoinPut200ApplicationJsonResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **listAddresses**
+> \ProfileService\Client\Model\DsAddressResponseArray listAddresses($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+ListAddresses
+
+gets all addresses of the current user
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->listAddresses($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->listAddresses: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsAddressResponseArray**](../Model/DsAddressResponseArray.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **listTravelers**
+> \ProfileService\Client\Model\DsTravelerResponseArray listTravelers($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+ListTravelers
+
+Get all travelers used in the profile
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->listTravelers($ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->listTravelers: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsTravelerResponseArray**](../Model/DsTravelerResponseArray.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **pATCHPartnerdataObject**
+> \ProfileService\Client\Model\DsPartnerDataResponse pATCHPartnerdataObject($name, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+PATCH partnerdata object
+
+Updates, creates or just returns existing partnerdata object in the current profile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$name = "name_example"; // string | Name of the partnerdata object
+$body = new \ProfileService\Client\Model\DsPartnerDataUpdateRequest(); // \ProfileService\Client\Model\DsPartnerDataUpdateRequest | PartnerDataRequest to update.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID to apply its offset to dates and time
+
+try {
+    $result = $apiInstance->pATCHPartnerdataObject($name, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->pATCHPartnerdataObject: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Name of the partnerdata object |
+ **body** | [**\ProfileService\Client\Model\DsPartnerDataUpdateRequest**](../Model/DsPartnerDataUpdateRequest.md)| PartnerDataRequest to update. | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID to apply its offset to dates and time | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsPartnerDataResponse**](../Model/DsPartnerDataResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -2426,6 +3553,67 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **sendOtp**
+> \ProfileService\Client\Model\DsSendOtpResponse sendOtp($body, $ocp_apim_subscription_key, $accept_language)
+
+Send Otp
+
+Send One-Time Passwort to the given account.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \ProfileService\Client\Model\DsSendOtpRequest(); // \ProfileService\Client\Model\DsSendOtpRequest | 
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$accept_language = "accept_language_example"; // string | Two-letter language code to get localized properties.
+
+try {
+    $result = $apiInstance->sendOtp($body, $ocp_apim_subscription_key, $accept_language);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->sendOtp: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\ProfileService\Client\Model\DsSendOtpRequest**](../Model/DsSendOtpRequest.md)|  | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **accept_language** | **string**| Two-letter language code to get localized properties. | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsSendOtpResponse**](../Model/DsSendOtpResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **sharePartnerdataObject**
 > \ProfileService\Client\Model\DsProfileDataShareResponse sharePartnerdataObject($name, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
 
@@ -2455,7 +3643,7 @@ $name = "name_example"; // string | Name of the partnerdata.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
-$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID to apply its offset to dates and time
 
 try {
     $result = $apiInstance->sharePartnerdataObject($name, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
@@ -2474,11 +3662,145 @@ Name | Type | Description  | Notes
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
- **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+ **accept_timezone** | **string**| Time zone ID to apply its offset to dates and time | [optional]
 
 ### Return type
 
 [**\ProfileService\Client\Model\DsProfileDataShareResponse**](../Model/DsProfileDataShareResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateCard**
+> \ProfileService\Client\Model\DsCardResponse updateCard($id, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+
+Update card
+
+Updates an existing card object of the current profile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the card.
+$body = new \ProfileService\Client\Model\DsCardRequest(); // \ProfileService\Client\Model\DsCardRequest | CardRequest to update.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->updateCard($id, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->updateCard: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the card. |
+ **body** | [**\ProfileService\Client\Model\DsCardRequest**](../Model/DsCardRequest.md)| CardRequest to update. | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsCardResponse**](../Model/DsCardResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **updateCustomerInStay**
+> \ProfileService\Client\Model\DsStayResponse updateCustomerInStay($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone)
+
+Update customer in stay
+
+Initialize customer update.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the stay.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_language = "accept_language_example"; // string | Two-letter language code to get localized properties.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->updateCustomerInStay($id, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->updateCustomerInStay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the stay. |
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_language** | **string**| Two-letter language code to get localized properties. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsStayResponse**](../Model/DsStayResponse.md)
 
 ### Authorization
 
@@ -2556,12 +3878,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updatePartnerdata**
-> \ProfileService\Client\Model\DsPartnerDataResponse updatePartnerdata($name, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
+# **updateOrCreatePartnerdata**
+> \ProfileService\Client\Model\DsPartnerDataResponse updateOrCreatePartnerdata($name, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone)
 
-Update partnerdata
+Update or create partnerdata
 
-Updates a existing partnerdata-object of the current profile.
+Updates or creates a partnerdata-object in the current profile.
 
 ### Example
 ```php
@@ -2582,17 +3904,17 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
     $config
 );
 $name = "name_example"; // string | Name of the partnerdata.
-$body = new \ProfileService\Client\Model\DsPartnerDataRequest(); // \ProfileService\Client\Model\DsPartnerDataRequest | PartnerDataRequest to update.
+$body = new \ProfileService\Client\Model\DsPartnerDataUpdateRequest(); // \ProfileService\Client\Model\DsPartnerDataUpdateRequest | PartnerDataRequest to update.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
-$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID to apply its offset to dates and time
 
 try {
-    $result = $apiInstance->updatePartnerdata($name, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
+    $result = $apiInstance->updateOrCreatePartnerdata($name, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->updatePartnerdata: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->updateOrCreatePartnerdata: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -2602,11 +3924,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| Name of the partnerdata. |
- **body** | [**\ProfileService\Client\Model\DsPartnerDataRequest**](../Model/DsPartnerDataRequest.md)| PartnerDataRequest to update. | [optional]
+ **body** | [**\ProfileService\Client\Model\DsPartnerDataUpdateRequest**](../Model/DsPartnerDataUpdateRequest.md)| PartnerDataRequest to update. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
- **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+ **accept_timezone** | **string**| Time zone ID to apply its offset to dates and time | [optional]
 
 ### Return type
 
@@ -2654,7 +3976,7 @@ $body = new \ProfileService\Client\Model\DsPropertyValueRequest(); // \ProfileSe
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
-$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID to apply its offset to dates and time
 
 try {
     $apiInstance->updatePartnerdataProperty($name, $property_id, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_timezone);
@@ -2674,7 +3996,7 @@ Name | Type | Description  | Notes
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
- **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+ **accept_timezone** | **string**| Time zone ID to apply its offset to dates and time | [optional]
 
 ### Return type
 
@@ -2758,8 +4080,77 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **updateStay**
+> \ProfileService\Client\Model\DsStayResponse updateStay($id, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone)
+
+Update stay
+
+Update an existing stay-object of the current profile.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | Id of the stay.
+$body = new \ProfileService\Client\Model\DsStayUpdateRequest(); // \ProfileService\Client\Model\DsStayUpdateRequest | StayRequest to update.
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$accept_language = "accept_language_example"; // string | Two-letter language code to get localized properties.
+$accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
+
+try {
+    $result = $apiInstance->updateStay($id, $body, $ocp_apim_subscription_key, $authorization, $profile_token, $accept_language, $accept_timezone);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->updateStay: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Id of the stay. |
+ **body** | [**\ProfileService\Client\Model\DsStayUpdateRequest**](../Model/DsStayUpdateRequest.md)| StayRequest to update. | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **accept_language** | **string**| Two-letter language code to get localized properties. | [optional]
+ **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsStayResponse**](../Model/DsStayResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **uploadMedia**
-> \ProfileService\Client\Model\DsProfileMediaResponse uploadMedia($ocp_apim_subscription_key, $authorization, $profile_token)
+> \ProfileService\Client\Model\DsProfileMediaBaseResponse uploadMedia($additional_type, $name, $ocp_apim_subscription_key, $authorization, $profile_token)
 
 Upload media
 
@@ -2783,12 +4174,14 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
+$additional_type = "additional_type_example"; // string | 
+$name = "name_example"; // string | 
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
 $authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
 
 try {
-    $result = $apiInstance->uploadMedia($ocp_apim_subscription_key, $authorization, $profile_token);
+    $result = $apiInstance->uploadMedia($additional_type, $name, $ocp_apim_subscription_key, $authorization, $profile_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->uploadMedia: ', $e->getMessage(), PHP_EOL;
@@ -2800,13 +4193,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **additional_type** | **string**|  | [optional]
+ **name** | **string**|  | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
  **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
 
 ### Return type
 
-[**\ProfileService\Client\Model\DsProfileMediaResponse**](../Model/DsProfileMediaResponse.md)
+[**\ProfileService\Client\Model\DsProfileMediaBaseResponse**](../Model/DsProfileMediaBaseResponse.md)
 
 ### Authorization
 
@@ -2814,7 +4209,68 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **validateEmailAddress**
+> \ProfileService\Client\Model\DsValidateEmailResponse validateEmailAddress($body, $ocp_apim_subscription_key, $authorization, $profile_token)
+
+Validate email address
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: apiKeyHeader
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('Ocp-Apim-Subscription-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Ocp-Apim-Subscription-Key', 'Bearer');// Configure API key authorization: apiKeyQuery
+$config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKey('subscription-key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = ProfileService\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('subscription-key', 'Bearer');
+
+$apiInstance = new ProfileService\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \ProfileService\Client\Model\DsValidateEmailRequest(); // \ProfileService\Client\Model\DsValidateEmailRequest | 
+$ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+
+try {
+    $result = $apiInstance->validateEmailAddress($body, $ocp_apim_subscription_key, $authorization, $profile_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->validateEmailAddress: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\ProfileService\Client\Model\DsValidateEmailRequest**](../Model/DsValidateEmailRequest.md)|  | [optional]
+ **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+
+### Return type
+
+[**\ProfileService\Client\Model\DsValidateEmailResponse**](../Model/DsValidateEmailResponse.md)
+
+### Authorization
+
+[apiKeyHeader](../../README.md#apiKeyHeader), [apiKeyQuery](../../README.md#apiKeyQuery)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
@@ -2876,7 +4332,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **writeBusinessTrailEntry**
-> \ProfileService\Client\Model\DsBusinesstrailPost200ApplicationJsonResponse writeBusinessTrailEntry($body, $ocp_apim_subscription_key, $accept_timezone)
+> \ProfileService\Client\Model\DsBusinesstrailPost200ApplicationJsonResponse writeBusinessTrailEntry($body, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone)
 
 Write business trail entry
 
@@ -2902,10 +4358,12 @@ $apiInstance = new ProfileService\Client\Api\DefaultApi(
 );
 $body = new \ProfileService\Client\Model\DsBusinessTrailRequest(); // \ProfileService\Client\Model\DsBusinessTrailRequest | BusinessTrailRequest.
 $ocp_apim_subscription_key = "ocp_apim_subscription_key_example"; // string | Subscription key to access the api. Get it on developer.discover.swiss.
+$profile_token = "profile_token_example"; // string | Profile token to identify the guest user profile.
+$authorization = "authorization_example"; // string | Authorization header to identify the B2C user profile.
 $accept_timezone = "accept_timezone_example"; // string | Time zone ID for response dates & times
 
 try {
-    $result = $apiInstance->writeBusinessTrailEntry($body, $ocp_apim_subscription_key, $accept_timezone);
+    $result = $apiInstance->writeBusinessTrailEntry($body, $ocp_apim_subscription_key, $profile_token, $authorization, $accept_timezone);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->writeBusinessTrailEntry: ', $e->getMessage(), PHP_EOL;
@@ -2919,6 +4377,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**\ProfileService\Client\Model\DsBusinessTrailRequest**](../Model/DsBusinessTrailRequest.md)| BusinessTrailRequest. | [optional]
  **ocp_apim_subscription_key** | **string**| Subscription key to access the api. Get it on developer.discover.swiss. | [optional]
+ **profile_token** | **string**| Profile token to identify the guest user profile. | [optional]
+ **authorization** | **string**| Authorization header to identify the B2C user profile. | [optional]
  **accept_timezone** | **string**| Time zone ID for response dates &amp; times | [optional]
 
 ### Return type
